@@ -1,0 +1,97 @@
+/* Background & Wrapper */
+.skills-page {
+  background-color: #f7f6fc;
+  min-height: 100vh;
+}
+
+/* Typography Title */
+.skills-main-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a2e;
+}
+
+.skills-title-line {
+  width: 50px;
+  height: 4px;
+  background-color: #6f42c1;
+  border-radius: 2px;
+}
+
+.max-w-600 {
+  max-width: 600px;
+}
+
+.text-purple {
+  color: #6f42c1 !important;
+}
+
+/* Main Cards */
+.skills-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(233, 236, 239, 0.8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Icon Box inside Card Header */
+.category-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: #f1ebff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+/* Circular Gauge SVG Rules */
+.gauge-container {
+  width: 80px;
+  height: 80px;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg); /* Start circle fill from top */
+}
+
+.gauge-bg {
+  fill: none;
+  stroke: #f1ebff;
+  stroke-width: 7;
+}
+
+.gauge-progress {
+  fill: none;
+  stroke-width: 7;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.8s ease-in-out;
+}
+
+.gauge-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Horizontal Progress Bars */
+.skill-progress-bg {
+  height: 6px;
+  background-color: #f1ebff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  transition: width 0.6s ease;
+}

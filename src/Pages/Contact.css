@@ -1,0 +1,207 @@
+/* Page Background & Base Tokens */
+.contact-page {
+  background-color: #f7f6fc;
+  min-height: 100vh;
+}
+
+.text-purple {
+  color: #6f42c1 !important;
+}
+
+.bg-purple-light {
+  background-color: #f1ebff;
+}
+
+.text-light-purple {
+  color: #e4dafd;
+}
+
+/* Badge */
+.contact-badge {
+  display: inline-block;
+  background-color: #f1ebff;
+  color: #6f42c1;
+  padding: 0.35rem 0.9rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Hero Titles */
+.contact-hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.2;
+}
+
+.contact-hero-description {
+  max-width: 480px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn-purple {
+  background-color: #6f42c1;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  border: 1px solid #6f42c1;
+  transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+  background-color: #59339d;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-purple {
+  border: 1.5px solid #6f42c1;
+  color: #1a1a2e;
+  border-radius: 12px;
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-purple:hover {
+  background-color: #f1ebff;
+  color: #6f42c1;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  border: none;
+}
+
+.btn-white:hover {
+  background-color: #f8f9fa;
+}
+
+/* Title Line */
+.contact-title-line {
+  width: 40px;
+  height: 3px;
+  background-color: #6f42c1;
+  border-radius: 2px;
+}
+
+/* Contact Info Box */
+.info-box-item {
+  background-color: #f8f9fc;
+  border: 1px solid #f1ebff;
+  transition: transform 0.25s ease;
+}
+
+.info-box-item:hover {
+  transform: translateX(4px);
+}
+
+.info-box-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #f1ebff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Social Buttons */
+.contact-social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #f1ebff;
+  color: #1a1a2e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.contact-social-btn:hover {
+  background-color: #6f42c1;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Custom Form Input Controls */
+.custom-input {
+  background-color: #f8f9fc;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+
+}
+
+.custom-input:focus {
+  background-color: #ffffff;
+  border-color: #6f42c1;
+  box-shadow: 0 0 0 0.2rem rgba(111, 66, 193, 0.15);
+}
+
+/* Why Work With Me Cards */
+.why-card {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+}
+
+.why-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background-color: #f1ebff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* CTA Banner */
+.cta-banner {
+  background: linear-gradient(135deg, #6f42c1 0%, #4f46e5 100%);
+  box-shadow: 0 15px 35px rgba(111, 66, 193, 0.2);
+}
+
+.cta-banner .btn-white {
+  background-color: #ffffff !important;
+  color: #6f42c1 !important;
+  border: none !important;
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.cta-banner .btn-white:hover {
+  background-color: #f1ebff !important;
+  color: #59339d !important;
+  transform: translateY(-2px);
+}
+
+/* Footer Bottom Strip */
+.bottom-note-strip {
+  background-color: #12142b;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

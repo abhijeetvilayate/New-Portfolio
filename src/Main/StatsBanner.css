@@ -1,0 +1,69 @@
+/* Sticky Banner Wrapper - Stays locked near the bottom of the screen */
+.stats-banner-wrapper {
+  position: sticky;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  width: 75%;
+  margin: 0 auto; /* Centers the banner horizontally */
+  z-index: 1000;
+}
+
+/* Card Container Styling */
+.stats-banner-card {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px rgba(111, 66, 193, 0.15);
+  border: 1px solid rgba(233, 236, 239, 0.8);
+  padding: 1.25rem 1.5rem;
+}
+
+/* Icon Box Styling */
+.stats-icon-wrapper {
+  width: 55px;
+  height: 55px;
+  border-radius: 1rem;
+  background-color: #f1ebff;
+  color: #6f42c1;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Text Typography */
+.stats-title {
+  font-weight: 700;
+  color: #1e1e2f;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.stats-subtitle {
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+/* 
+ * FIXED: Vertical Divider & Spacing Controls 
+ */
+.stats-divider {
+  width: 1px;
+  height: 38px;
+  background-color: #e9ecef;
+  margin: 0 auto; /* Center divider cleanly */
+}
+
+/* Tighten grid spacing on desktop so items sit closer to lines */
+@media (min-width: 992px) {
+  .stats-banner-card .row {
+    gap: 0 !important; /* Removes default row gaps */
+  }
+
+  .stats-banner-card .col-lg-auto {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+} 

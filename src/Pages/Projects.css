@@ -1,0 +1,120 @@
+/* Page Background */
+.projects-page {
+  background-color: #f7f6fc;
+  min-height: 100vh;
+}
+
+.text-purple {
+  color: #6f42c1 !important;
+}
+
+.btn-purple {
+  background-color: #6f42c1;
+  color: #ffffff;
+}
+
+/* Page Header */
+.projects-main-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a2e;
+}
+
+.projects-title-line {
+  width: 50px;
+  height: 4px;
+  background-color: #6f42c1;
+  border-radius: 2px;
+}
+
+.max-w-600 {
+  max-width: 600px;
+}
+
+/* Category Filter Pills */
+.filter-pill-btn {
+  border: 1px solid #e9ecef;
+  background-color: #ffffff;
+  color: #495057;
+  padding: 0.45rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.filter-pill-btn:hover {
+  border-color: #6f42c1;
+  color: #6f42c1;
+}
+
+.filter-pill-btn.active {
+  background-color: #6f42c1;
+  color: #ffffff;
+  border-color: #6f42c1;
+  box-shadow: 0 4px 15px rgba(111, 66, 193, 0.25);
+}
+
+/* Project Cards */
+.project-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(233, 236, 239, 0.8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(111, 66, 193, 0.08);
+}
+
+/* Project Mockup Containers */
+.project-preview-wrapper {
+  height: 180px;
+  background-color: #12142b;
+}
+
+.mockup-ems,
+.mockup-netflix,
+.mockup-portfolio {
+  height: 100%;
+  width: 100%;
+}
+
+.project-points-list li {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+/* Buttons in Card */
+.project-btn-outline {
+  border: 1px solid #e9ecef;
+  background-color: #ffffff;
+  color: #1a1a2e;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.5rem;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.project-btn-outline:hover {
+  border-color: #6f42c1;
+  color: #6f42c1;
+  background-color: #f1ebff;
+}
+
+/* Bottom Stats Banner */
+.stats-icon-purple {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background-color: #f1ebff;
+  color: #6f42c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}

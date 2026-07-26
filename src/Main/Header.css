@@ -1,0 +1,161 @@
+/* Sticky Header with Backdrop Blur */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: rgba(247, 246, 252, 0.85) !important; /* Semi-transparent match to hero background */
+  backdrop-filter: blur(12px); /* Glassmorphism effect while scrolling */
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  padding: 14px 0;
+  transition: all 0.3s ease;
+}
+
+/* Logo */
+.logo-circle {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+
+  background: linear-gradient(135deg, #8b5cf6, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-brand h5 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.navbar-brand small {
+  color: #6b7280 !important;
+  font-size: 13px;
+}
+
+/* Navigation */
+.nav-item {
+  margin: 0 6px;
+}
+
+.nav-btn {
+  background: none !important;
+  border: none !important;
+  color: #222;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 16px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  color: #6c3cff;
+}
+
+.nav-btn.active {
+  color: #6c3cff !important;
+}
+
+.nav-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transform: translateX(-50%) scaleX(0);
+
+  width: 35px;
+  height: 6px;
+
+  border: 2px solid #7c3aed;
+  border-radius: 30px;
+
+  transition: 0.35s;
+}
+
+.nav-btn.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Theme Switch */
+.theme-switch {
+  width: 58px;
+  height: 32px;
+
+  border: 1px solid #ddd;
+  border-radius: 40px;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  padding: 3px;
+
+  transition: 0.3s;
+}
+
+.switch-circle {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+  transition: 0.35s;
+}
+
+.theme-switch.active {
+  background: #6c3cff;
+}
+
+.theme-switch.active .switch-circle {
+  transform: translateX(26px);
+}
+
+/* Resume Button */
+.resume-btn {
+  background: linear-gradient(135deg, #8b5cf6, #4f46e5) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+}
+
+/* Responsive Collapsible Drawer Adjustments */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-top: 15px;
+    padding: 1rem;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-btn::after {
+    display: none;
+  }
+
+  .resume-btn {
+    width: 100%;
+  }
+}

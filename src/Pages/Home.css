@@ -1,0 +1,175 @@
+    /* Container & Background Glow */
+    .hero-section {
+    position: relative;
+    background-color: #f7f6fc;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    }
+
+    /* Badge Style */
+    .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #ede8fc;
+    color: #5243aa;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    }
+
+    /* Title & Typography */
+    .hero-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1.1;
+    margin-top: 1rem;
+    }
+
+    .hero-title-highlight {
+    color: #6f42c1;
+    display: block;
+    }
+
+    .hero-subtitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+    }
+
+    .hero-description {
+    color: #6c757d;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 480px;
+    }
+
+    /* Buttons */
+    .btn.btn-purple {
+    background-color: #6f42c1;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;
+    border: 1.5px solid #6f42c1;
+    transition: all 0.3s ease;
+    }
+
+    .btn.btn-purple:hover {
+    background-color: #59339d;
+    border-color: #59339d;
+    color: #ffffff;
+    transform: translateY(-2px);
+    }
+
+    .btn.btn-outline-purple {
+    border: 1.5px solid #6f42c1;
+    color: #1a1a2e;
+    border-radius: 12px;
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    }
+
+    .btn.btn-outline-purple:hover {
+    background-color: #f1ebff;
+    color: #6f42c1;
+    border-color: #6f42c1;
+    transform: translateY(-2px);
+    }
+
+    /* Social Icons */
+    .social-icon-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #ede8fc;
+    color: #1a1a2e;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    }
+
+    .social-icon-btn:hover {
+    background-color: #6f42c1;
+    color: #ffffff;
+    transform: translateY(-2px);
+    }
+
+
+    /* 
+    * -------------------------------------------------------------
+    * RIGHT SIDE: IMAGE & LAYERED BLOB BACKDROP (BIGGER IMAGE)
+    * -------------------------------------------------------------
+    */
+
+    .hero-img-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* Increased container width */
+    height: 480px;     /* Increased height */
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end; /* Keeps image grounded at bottom */
+    justify-content: center;
+    }
+
+    /* 1. Outer Gradient Ambient Glow */
+    .hero-blob-backdrop {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    background: radial-gradient(
+        circle,
+        rgba(111, 66, 193, 0.22) 0%,
+        rgba(247, 246, 252, 0) 70%
+    );
+    z-index: 1;
+    pointer-events: none;
+    }
+
+    /* 2. Solid Soft Purple Organic Blob Shape */
+    .hero-organic-shape {
+    position: absolute;
+    width: 95%;
+    height: 90%;
+    bottom: 0;
+    left: 2.5%;
+    background: linear-gradient(135deg, #e4dafd 0%, #dcd0f9 100%);
+    border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(111, 66, 193, 0.08);
+    }
+
+    /* 3. The Cutout Person Image (Scaled Up) */
+    .hero-person-cutout {
+    position: relative;
+    z-index: 3;
+    height: 100%;       
+    max-height: 480px;  
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 25px rgba(26, 26, 46, 0.12));
+    margin-bottom: 20px;
+    margin-left: 30px; 
+    }
+
+    /* Responsive tweak for smaller laptops / screens */
+    @media (max-width: 1200px) {
+    .hero-img-container {
+        height: 500px;
+    }
+    .hero-person-cutout {
+        max-height: 520px;
+    }
+    }

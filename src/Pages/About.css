@@ -1,0 +1,139 @@
+/* Container Background */
+.about-page {
+  background-color: #f7f6fc;
+  min-height: 100vh;
+}
+
+/* Color Tokens */
+.text-purple {
+  color: #6f42c1 !important;
+}
+
+/* Typography */
+.about-subtitle {
+  color: #6f42c1;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.about-title-underline {
+  width: 40px;
+  height: 3px;
+  background-color: #6f42c1;
+  border-radius: 2px;
+}
+
+.about-main-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.2;
+}
+
+.about-intro-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Info Grid Icons */
+.info-icon-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background-color: #f1ebff;
+  color: #6f42c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.info-text-value {
+  color: #1a1a2e;
+  font-size: 0.95rem;
+}
+
+/* Left Image Area & Frame */
+.about-img-wrapper {
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.about-portrait-card {
+  background-color: #dcd0f9;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.about-person-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Open to Work Badge */
+.open-to-work-badge {
+  position: absolute;
+  top: 30%;
+  left: -20px;
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  z-index: 3;
+}
+
+.work-badge-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #f1ebff;
+  color: #6f42c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Feature Cards (Bottom Grid) */
+.about-feature-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(233, 236, 239, 0.8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.about-feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f1ebff;
+  color: #6f42c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+/* Timeline Styling */
+.timeline-wrapper {
+  border-left: 2px solid #ede8fc;
+  padding-left: 15px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #6f42c1;
+  border-radius: 50%;
+}
