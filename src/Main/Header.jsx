@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import ResumePDF from "../assets/Abhijeet_Vilayate_Resume.pdf";
 import "./Header.css";
 
 function Header() {
@@ -53,7 +54,7 @@ function Header() {
           {/* Right Side */}
           <div className="d-flex align-items-center justify-content-center gap-3 mt-3 mt-lg-0">
             <a
-              href="/resume.pdf"
+              href={ResumePDF}
               download="Abhijeet_Vilayate_Resume.pdf"
               className="btn resume-btn text-decoration-none"
             >

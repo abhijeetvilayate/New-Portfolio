@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
+import ResumePDF from "../assets/Abhijeet_Vilayate_Resume.pdf";
 
 export const Contact = () => {
   const formRef = useRef();
@@ -64,7 +65,7 @@ export const Contact = () => {
                 Hire Me <i className="bi bi-arrow-right"></i>
               </a>
               <a
-                href="/resume.pdf"
+                href={ResumePDF}
                 download="Abhijeet_Vilayate_Resume.pdf"
                 className="btn btn-outline-purple d-inline-flex align-items-center gap-2 text-decoration-none"
               >
