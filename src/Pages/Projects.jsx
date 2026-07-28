@@ -38,7 +38,7 @@ export const Projects = () => {
       technologies: 'HTML5, CSS3, Responsive Design',
       description: 'Responsive Netflix home page clone built using HTML and CSS.',
       githubUrl: 'https://github.com/abhijeetvilayate/NETFLIX-CLONE',
-      liveUrl: 'https://github.com/abhijeetvilayate/NETFLIX-CLONE',
+      liveUrl: 'https://abhijeetvilayate.github.io/NETFLIX-CLONE/',
       imageSrc: netflixCloneImg,
     },
     {
