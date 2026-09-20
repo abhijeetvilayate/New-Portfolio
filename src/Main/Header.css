@@ -12,15 +12,17 @@
 }
 
 /* Logo */
-.logo-circle {
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 1;
+.navbar-logo-img {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: contrast(1.05);
+  transition: transform 0.3s ease;
+}
 
-  background: linear-gradient(135deg, #8b5cf6, #4f46e5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.navbar-logo-img:hover {
+  transform: scale(1.1);
 }
 
 .navbar-brand h5 {

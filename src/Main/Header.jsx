@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import ResumePDF from "../assets/Abhijeet_Vilayate_Resume.pdf";
+import avLogo from "../assets/av-logo.png";
 import "./Header.css";
 
 function Header() {
@@ -18,7 +19,7 @@ function Header() {
       <div className="container">
         {/* Logo */}
         <Link className="navbar-brand d-flex align-items-center text-decoration-none" to="/">
-          <div className="logo-circle">AV</div>
+          <img src={avLogo} alt="AV Logo" className="navbar-logo-img" />
           <div className="ms-2">
             <h5 className="mb-0 fw-bold">Abhijeet Vilayate</h5>
             <small className="text-muted">Full Stack Developer</small>

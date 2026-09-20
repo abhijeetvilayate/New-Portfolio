@@ -9,7 +9,7 @@ export const Skills = () => {
     { name: 'JavaScript', percent: 90, color: '#f7df1e', icon: 'bi-filetype-js' },
     { name: 'Bootstrap', percent: 85, color: '#7952b3', icon: 'bi-bootstrap-fill' },
     { name: 'React + Vite', percent: 90, color: '#00d8ff', icon: 'bi-atom' },
-    { name: 'Node.js', percent: 85, color: '#68a063', icon: 'bi-node-plus-fill' },
+    { name: 'Spring Boot', percent: 85, color: '#6db33f', icon: 'bi-cpu-fill' },
     { name: 'Python', percent: 90, color: '#3776ab', icon: 'bi-filetype-py' },
   ];
 
@@ -102,9 +102,9 @@ export const Skills = () => {
               </div>
 
               <div className="d-flex flex-column gap-3">
-                <SkillBar icon="bi-node-plus text-success" name="Node.js" percent={85} color="#68a063" />
+                <SkillBar icon="bi-cup-hot text-danger" name="Java" percent={90} color="#e44d26" />
+                <SkillBar icon="bi-lightning-charge text-success" name="Spring Boot" percent={85} color="#6db33f" />
                 <SkillBar icon="bi-diagram-3 text-purple" name="RESTful APIs" percent={90} color="#7952b3" />
-                <SkillBar icon="bi-cup-hot text-danger" name="Java" percent={85} color="#e44d26" />
                 <SkillBar icon="bi-cpu text-primary" name="JDBC" percent={80} color="#4f46e5" />
               </div>
             </div>

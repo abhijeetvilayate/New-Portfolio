@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 import ResumePDF from "../assets/Abhijeet_Vilayate_Resume.pdf";
+import avLogo from "../assets/av-logo.png";
 
 export const Contact = () => {
   const formRef = useRef();
@@ -334,7 +335,7 @@ export const Contact = () => {
               >
                 Hire Me <i className="bi bi-arrow-right"></i>
               </a>
-              <a href="/resume.pdf" download="Abhijeet_Vilayate_Resume.pdf" className="btn btn-outline-white text-white border-white fw-semibold px-4 rounded-3 text-decoration-none">
+              <a href={ResumePDF} download="Abhijeet_Vilayate_Resume.pdf" className="btn btn-outline-white text-white border-white fw-semibold px-4 rounded-3 text-decoration-none">
                 Download Resume <i className="bi bi-download"></i>
               </a>
             </div>
@@ -346,7 +347,7 @@ export const Contact = () => {
           <div className="row g-4 mb-4">
             <div className="col-12 col-md-4">
               <div className="d-flex align-items-center gap-2 mb-2">
-                <div className="logo-circle">AV</div>
+                <img src={avLogo} alt="AV Logo" className="navbar-logo-img" />
                 <div>
                   <h6 className="mb-0 fw-bold text-dark">Abhijeet Vilayate</h6>
                   <small className="text-muted">Full Stack Developer</small>

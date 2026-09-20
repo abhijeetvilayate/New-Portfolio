@@ -1,4 +1,5 @@
 import "./Footer.css";
+import avLogo from "./assets/av-logo.png";
 import {
   BsGithub,
   BsLinkedin,
@@ -24,13 +25,13 @@ export default function Footer() {
 
             <div className="col-lg-4">
 
-              <h2 className="footer-logo">AV</h2>
+              <img src={avLogo} alt="AV Logo" className="footer-logo-img mb-2" />
 
               <h4>Abhijeet Vilayate</h4>
 
               <p>
                 Full Stack Developer passionate about building modern,
-                responsive web applications with React, Node.js and Java.
+                responsive web applications with React, Spring Boot and Java.
               </p>
 
             </div>
