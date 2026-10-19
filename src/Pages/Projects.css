@@ -1,30 +1,50 @@
-/* Page Background */
+/* ==========================================================================
+   PROJECTS PAGE - OBSIDIAN GLASS & BROWSER MOCKUPS
+   ========================================================================== */
+
 .projects-page {
-  background-color: #f7f6fc;
+  background: transparent;
   min-height: 100vh;
 }
 
-.text-purple {
-  color: #6f42c1 !important;
+/* Giant 3D Ghost Watermark (Centered & Perfectly Fitted) */
+.projects-ghost-watermark {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  font-family: 'Syne', 'Outfit', sans-serif;
+  font-size: clamp(2.6rem, 7.8vw, 7.2rem);
+  font-weight: 900;
+  letter-spacing: clamp(0.08em, 0.2vw, 0.16em);
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgba(245, 158, 11, 0.08);
+  text-shadow: 0 0 50px rgba(245, 158, 11, 0.06);
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+  white-space: nowrap;
+  line-height: 1;
+  overflow: hidden;
+  padding: 0 1rem;
 }
 
-.btn-purple {
-  background-color: #6f42c1;
-  color: #ffffff;
-}
-
-/* Page Header */
 .projects-main-title {
   font-size: 2.8rem;
   font-weight: 800;
-  color: #1a1a2e;
+  color: #ffffff;
+  letter-spacing: -0.02em;
 }
 
 .projects-title-line {
   width: 50px;
   height: 4px;
-  background-color: #6f42c1;
-  border-radius: 2px;
+  background: var(--grad-primary);
+  border-radius: 99px;
 }
 
 .max-w-600 {
@@ -33,72 +53,69 @@
 
 /* Category Filter Pills */
 .filter-pill-btn {
-  border: 1px solid #e9ecef;
-  background-color: #ffffff;
-  color: #495057;
-  padding: 0.45rem 1.25rem;
-  border-radius: 12px;
-  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: #94a3b8;
+  padding: 0.5rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 600;
   font-size: 0.85rem;
+  backdrop-filter: blur(8px);
   transition: all 0.25s ease;
 }
 
 .filter-pill-btn:hover {
-  border-color: #6f42c1;
-  color: #6f42c1;
+  border-color: rgba(192, 132, 252, 0.4);
+  color: #ffffff;
+  background: rgba(168, 85, 247, 0.12);
+  transform: translateY(-2px);
 }
 
 .filter-pill-btn.active {
-  background-color: #6f42c1;
+  background: var(--grad-primary);
   color: #ffffff;
-  border-color: #6f42c1;
-  box-shadow: 0 4px 15px rgba(111, 66, 193, 0.25);
-}
-
-/* Project Cards */
-.project-card {
-  background-color: #ffffff;
-  border-radius: 20px;
-  border: 1px solid rgba(233, 236, 239, 0.8);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(111, 66, 193, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.45);
 }
 
 /* Webpage Browser Mockup Preview */
 .webpage-preview-wrapper {
-  background-color: #1e1e2e;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  background-color: #0b0d18;
+  border: 1px solid rgba(192, 132, 252, 0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .webpage-preview-wrapper:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(111, 66, 193, 0.2);
-  border-color: #6f42c1 !important;
+  transform: translateY(-3px);
+  border-color: rgba(192, 132, 252, 0.5) !important;
+  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.25);
 }
 
 .browser-mockup-header {
-  background-color: #181825 !important;
+  background: rgba(13, 16, 28, 0.95);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.browser-url-bar {
+  background: rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+  font-family: monospace;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .webpage-preview-img {
-  transition: transform 0.5s ease;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .webpage-preview-wrapper:hover .webpage-preview-img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .webpage-hover-overlay {
-  background: rgba(18, 20, 43, 0.45);
-  backdrop-filter: blur(2px);
+  background: rgba(9, 10, 16, 0.65);
+  backdrop-filter: blur(4px);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -107,39 +124,61 @@
   opacity: 1;
 }
 
-.project-points-list li {
-  margin-bottom: 4px;
-  line-height: 1.4;
+.bg-modern-purple {
+  background: var(--grad-primary) !important;
+  color: #ffffff !important;
+  font-weight: 600;
 }
 
-/* Buttons in Card */
-.project-btn-outline {
-  border: 1px solid #e9ecef;
-  background-color: #ffffff;
-  color: #1a1a2e;
-  font-size: 0.75rem;
+/* Project Category Tag */
+.project-category-tag {
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(192, 132, 252, 0.25);
+  color: var(--color-lilac-bright);
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
   font-weight: 600;
-  padding: 0.4rem 0.5rem;
-  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+
+.project-points-list li {
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+/* Card Buttons */
+.project-btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
   transition: all 0.25s ease;
 }
 
 .project-btn-outline:hover {
-  border-color: #6f42c1;
-  color: #6f42c1;
-  background-color: #f1ebff;
+  border-color: rgba(192, 132, 252, 0.4);
+  color: var(--color-lilac-bright);
+  background: rgba(168, 85, 247, 0.12);
 }
 
-/* Bottom Stats Banner */
-.stats-icon-purple {
-  width: 42px;
-  height: 42px;
+.project-btn-primary {
+  background: var(--grad-primary);
+  border: none;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
   border-radius: 12px;
-  background-color: #f1ebff;
-  color: #6f42c1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.3);
+}
+
+.project-btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.55);
+  color: #ffffff;
+  transform: translateY(-2px);
 }

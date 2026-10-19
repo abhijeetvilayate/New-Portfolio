@@ -1,0 +1,49 @@
+/* ==========================================================================
+   3D TILT CARD COMPONENT
+   ========================================================================== */
+
+.tilt-card-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-glare-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 10;
+  mix-blend-mode: overlay;
+  transition: opacity 0.2s ease;
+}
+
+/* Explicitly disable glare overlay on Hero portrait */
+.hero-tilt-wrapper .tilt-glare-overlay {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* 3D Depth Classes for Children Inside TiltCard */
+.tilt-card-wrapper .tilt-layer-base {
+  transform: translateZ(10px);
+}
+
+.tilt-card-wrapper .tilt-layer-middle {
+  transform: translateZ(25px);
+  transform-style: preserve-3d;
+}
+
+.tilt-card-wrapper .tilt-layer-front {
+  transform: translateZ(45px);
+  transform-style: preserve-3d;
+}
+
+.tilt-card-wrapper .tilt-layer-pop {
+  transform: translateZ(65px);
+  transform-style: preserve-3d;
+}

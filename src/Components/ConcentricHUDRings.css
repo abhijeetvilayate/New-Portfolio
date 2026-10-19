@@ -1,0 +1,86 @@
+/* ==========================================================================
+   CONCENTRIC HUD RINGS (Behind Portrait Cutout)
+   ========================================================================== */
+
+.hud-rings-wrapper {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 530px;
+  height: 530px;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hud-rings-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Multi-Axis Kinetic Rotations */
+.hud-layer-outer {
+  transform-origin: 270px 270px;
+  animation: rotateHUDClockwise 45s linear infinite;
+}
+
+.hud-layer-mid {
+  transform-origin: 270px 270px;
+  animation: rotateHUDCounter 30s linear infinite;
+}
+
+.hud-layer-inner {
+  transform-origin: 270px 270px;
+  animation: rotateHUDClockwise 25s linear infinite;
+}
+
+.hud-layer-core {
+  transform-origin: 270px 270px;
+  animation: rotateHUDCounter 18s linear infinite;
+}
+
+@keyframes rotateHUDClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateHUDCounter {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Responsive Scaling for Tablets and Mobile */
+@media (max-width: 1200px) {
+  .hud-rings-wrapper {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hud-rings-wrapper {
+    width: 440px;
+    height: 440px;
+    top: 26%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hud-rings-wrapper {
+    width: 360px;
+    height: 360px;
+    top: 26%;
+  }
+}

@@ -1,0 +1,62 @@
+/* ==========================================================================
+   CYBER CIRCUIT BOARD BACKDROP
+   ========================================================================== */
+
+.cyber-circuit-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0.85;
+  transition: opacity 0.5s ease;
+}
+
+.cyber-circuit-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Subtle Kinetic Pulse along Data Bus Lines */
+.pulse-path-slow {
+  animation: circuitPulseSlow 8s linear infinite;
+}
+
+.pulse-path-reverse {
+  animation: circuitPulseReverse 10s linear infinite;
+}
+
+@keyframes circuitPulseSlow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 240;
+  }
+}
+
+@keyframes circuitPulseReverse {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -280;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .cyber-circuit-container {
+    opacity: 0.65;
+  }
+}
+
+@media (max-width: 576px) {
+  .cyber-circuit-container {
+    opacity: 0.55;
+  }
+}

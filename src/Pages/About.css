@@ -1,47 +1,147 @@
-/* Container Background */
+/* ==========================================================================
+   ABOUT PAGE - OBSIDIAN, ELECTRIC LILAC & AMBER AESTHETIC
+   ========================================================================== */
+
 .about-page {
-  background-color: #f7f6fc;
+  background: transparent;
   min-height: 100vh;
 }
 
-/* Color Tokens */
-.text-purple {
-  color: #6f42c1 !important;
-}
-
-/* Typography */
-.about-subtitle {
-  color: #6f42c1;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.about-title-underline {
-  width: 40px;
-  height: 3px;
-  background-color: #6f42c1;
-  border-radius: 2px;
+/* Giant 3D Ghost Watermark (Centered & Perfectly Fitted) */
+.about-ghost-watermark {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  font-family: 'Syne', 'Outfit', sans-serif;
+  font-size: clamp(2.6rem, 7.8vw, 7.2rem);
+  font-weight: 900;
+  letter-spacing: clamp(0.08em, 0.2vw, 0.16em);
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgba(192, 132, 252, 0.08);
+  text-shadow: 0 0 50px rgba(168, 85, 247, 0.06);
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+  white-space: nowrap;
+  line-height: 1;
+  overflow: hidden;
+  padding: 0 1rem;
 }
 
 .about-main-heading {
   font-size: 2.8rem;
   font-weight: 800;
-  color: #1a1a2e;
+  color: #ffffff;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .about-intro-text {
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.75;
+  color: #94a3b8;
 }
 
-/* Info Grid Icons */
-.info-icon-box {
-  width: 45px;
-  height: 45px;
+/* Photo Wrapper & Dual-Aura Frame */
+.about-img-wrapper {
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* Concentric HUD Layer (Behind About portrait) */
+.about-hud-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-hud-layer .hud-rings-wrapper {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 480px;
+}
+
+/* Explicitly disable glare overlay on About tilt */
+.about-tilt-wrapper .tilt-glare-overlay {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.about-person-img {
+  width: 100%;
+  max-height: 480px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.65));
+  mask-image: linear-gradient(to bottom, black 86%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 86%, transparent 100%);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+/* Open to Work Floating Badge */
+.open-to-work-badge {
+  position: absolute;
+  bottom: 25px;
+  left: -20px;
+  background: rgba(18, 22, 38, 0.9);
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  padding: 0.65rem 1.15rem;
+  border-radius: 18px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 3;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.work-badge-icon {
+  width: 38px;
+  height: 38px;
   border-radius: 12px;
-  background-color: #f1ebff;
-  color: #6f42c1;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+/* Info Tiles in About Grid */
+.about-info-tile {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+}
+
+.about-info-tile:hover {
+  background: rgba(168, 85, 247, 0.08);
+  border-color: rgba(192, 132, 252, 0.3);
+  transform: translateX(4px);
+}
+
+.info-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,90 +150,66 @@
 }
 
 .info-text-value {
-  color: #1a1a2e;
+  color: #ffffff;
   font-size: 0.95rem;
+  font-weight: 600;
 }
 
-/* Left Image Area & Frame */
-.about-img-wrapper {
-  max-width: 380px;
-  margin: 0 auto;
-}
-
-.about-portrait-card {
-  background-color: #dcd0f9;
-  border-radius: 24px;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-}
-
-.about-person-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* Open to Work Badge */
-.open-to-work-badge {
-  position: absolute;
-  top: 30%;
-  left: -20px;
-  background-color: #ffffff;
-  padding: 0.5rem 1rem;
-  border-radius: 16px;
-  z-index: 3;
-}
-
-.work-badge-icon {
-  width: 35px;
-  height: 35px;
-  border-radius: 10px;
-  background-color: #f1ebff;
-  color: #6f42c1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Feature Cards (Bottom Grid) */
-.about-feature-card {
-  background-color: #ffffff;
-  border-radius: 20px;
-  border: 1px solid rgba(233, 236, 239, 0.8);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
-  transition: transform 0.3s ease;
-}
-
-.about-feature-card:hover {
-  transform: translateY(-4px);
-}
-
+/* Card Header Glowing Icons */
 .card-header-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #f1ebff;
-  color: #6f42c1;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+}
+
+.bg-purple-glow {
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  color: var(--color-lilac-bright);
+}
+
+.bg-amber-glow {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: var(--color-amber-bright);
 }
 
 /* Timeline Styling */
 .timeline-wrapper {
-  border-left: 2px solid #ede8fc;
-  padding-left: 15px;
+  border-left: 2px solid rgba(192, 132, 252, 0.2);
+  padding-left: 18px;
 }
 
 .timeline-dot {
   position: absolute;
-  left: -20px;
+  left: -24px;
   top: 5px;
   width: 10px;
   height: 10px;
-  background-color: #6f42c1;
+  background-color: var(--color-lilac-bright);
   border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-lilac-bright);
+}
+
+/* Tech Icon Box */
+.tech-icon-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.25s ease;
+}
+
+.tech-icon-box:hover {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: rgba(192, 132, 252, 0.35);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 991px) {
+  .about-img-wrapper {
+    margin-bottom: 2rem;
+  }
 }

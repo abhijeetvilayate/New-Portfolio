@@ -1,69 +1,92 @@
-/* Sticky Banner Wrapper - Stays locked near the bottom of the screen */
+/* ==========================================================================
+   STATS BANNER - MODERN OBSIDIAN GLASS
+   ========================================================================== */
+
 .stats-banner-wrapper {
-  position: sticky;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  width: 75%;
-  margin: 0 auto; /* Centers the banner horizontally */
-  z-index: 1000;
+  position: relative;
+  width: 90%;
+  max-width: 1080px;
+  margin: 30px auto 40px auto;
+  z-index: 20;
 }
 
 /* Card Container Styling */
 .stats-banner-card {
-  background-color: #ffffff;
-  border-radius: 1.25rem;
-  box-shadow: 0 10px 30px rgba(111, 66, 193, 0.15);
-  border: 1px solid rgba(233, 236, 239, 0.8);
-  padding: 1.25rem 1.5rem;
+  background: rgba(18, 22, 38, 0.78) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px !important;
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(168, 85, 247, 0.12) !important;
+  border: 1px solid rgba(192, 132, 252, 0.18) !important;
+  padding: 1.25rem 1.75rem;
+  transition: all 0.35s ease;
+}
+
+.stats-banner-card:hover {
+  border-color: rgba(192, 132, 252, 0.35) !important;
+  box-shadow: 
+    0 25px 55px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(168, 85, 247, 0.22) !important;
 }
 
 /* Icon Box Styling */
 .stats-icon-wrapper {
-  width: 55px;
-  height: 55px;
-  border-radius: 1rem;
-  background-color: #f1ebff;
-  color: #6f42c1;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(192, 132, 252, 0.25);
+  color: var(--color-lilac-bright);
   font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.stats-banner-card:hover .stats-icon-wrapper {
+  background: rgba(168, 85, 247, 0.22);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.35);
+  transform: scale(1.05);
 }
 
 /* Text Typography */
 .stats-title {
-  font-weight: 700;
-  color: #1e1e2f;
-  margin-bottom: 0;
-  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 2px;
+  font-size: 1.45rem;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #ffffff 40%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .stats-subtitle {
-  color: #6c757d;
+  color: var(--text-muted);
   font-size: 0.85rem;
   margin-bottom: 0;
+  font-weight: 500;
 }
 
-/* 
- * FIXED: Vertical Divider & Spacing Controls 
- */
+/* Divider & Spacing Controls */
 .stats-divider {
   width: 1px;
   height: 38px;
-  background-color: #e9ecef;
-  margin: 0 auto; /* Center divider cleanly */
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 auto;
 }
 
-/* Tighten grid spacing on desktop so items sit closer to lines */
-@media (min-width: 992px) {
-  .stats-banner-card .row {
-    gap: 0 !important; /* Removes default row gaps */
+@media (max-width: 768px) {
+  .stats-banner-wrapper {
+    width: 95%;
+    margin-top: 20px;
   }
 
-  .stats-banner-card .col-lg-auto {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+  .stats-banner-card {
+    padding: 1.25rem 1rem;
   }
-} 
+}

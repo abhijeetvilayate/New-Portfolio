@@ -1,175 +1,344 @@
-    /* Container & Background Glow */
-    .hero-section {
-    position: relative;
-    background-color: #f7f6fc;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    }
+/* ==========================================================================
+   HERO SECTION - TAILORED OBSIDIAN, LILAC & AMBER AESTHETIC
+   ========================================================================== */
 
-    /* Badge Style */
-    .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #ede8fc;
-    color: #5243aa;
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    font-weight: 500;
-    font-size: 0.9rem;
-    }
+.home-wrapper {
+  position: relative;
+  overflow: hidden;
+}
 
-    /* Title & Typography */
-    .hero-title {
-    font-size: 3.8rem;
-    font-weight: 800;
-    color: #1a1a2e;
-    line-height: 1.1;
-    margin-top: 1rem;
-    }
+/* Giant 3D Ghost Watermark (Centered & Perfectly Fitted) */
+.hero-ghost-watermark {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  font-family: 'Syne', 'Outfit', sans-serif;
+  font-size: clamp(2.6rem, 7.8vw, 7.2rem);
+  font-weight: 900;
+  letter-spacing: clamp(0.08em, 0.2vw, 0.16em);
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgba(192, 132, 252, 0.08);
+  text-shadow: 0 0 50px rgba(168, 85, 247, 0.06);
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+  white-space: nowrap;
+  line-height: 1;
+  overflow: hidden;
+  padding: 0 1rem;
+}
 
-    .hero-title-highlight {
-    color: #6f42c1;
-    display: block;
-    }
+/* Futuristic HUD Telemetry Badge */
+.hud-telemetry-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: rgba(14, 18, 32, 0.7);
+  border: 1px dashed rgba(245, 158, 11, 0.4);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 600;
+  color: #fde68a;
+  backdrop-filter: blur(10px);
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 
-    .hero-subtitle {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 1rem;
-    }
+.hero-section {
+  position: relative;
+  min-height: 86vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 0 30px 0;
+  background: transparent;
+}
 
-    .hero-description {
-    color: #6c757d;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    max-width: 480px;
-    }
+/* Hero Typography */
+.hero-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-top: 0.5rem;
+}
 
-    /* Buttons */
-    .btn.btn-purple {
-    background-color: #6f42c1;
-    color: #ffffff;
-    border-radius: 12px;
-    padding: 0.75rem 1.75rem;
-    font-weight: 600;
-    border: 1.5px solid #6f42c1;
-    transition: all 0.3s ease;
-    }
+.hero-name-white {
+  color: #ffffff !important;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+}
 
-    .btn.btn-purple:hover {
-    background-color: #59339d;
-    border-color: #59339d;
-    color: #ffffff;
-    transform: translateY(-2px);
-    }
+.hero-subtitle {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #e2e8f0 !important;
+  line-height: 1.25;
+}
 
-    .btn.btn-outline-purple {
-    border: 1.5px solid #6f42c1;
-    color: #1a1a2e;
-    border-radius: 12px;
-    padding: 0.75rem 1.75rem;
-    font-weight: 600;
-    background-color: transparent;
-    transition: all 0.3s ease;
-    }
+.hero-description {
+  color: #cbd5e1 !important;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  max-width: 520px;
+}
 
-    .btn.btn-outline-purple:hover {
-    background-color: #f1ebff;
-    color: #6f42c1;
-    border-color: #6f42c1;
-    transform: translateY(-2px);
-    }
+.highlight-tech-purple {
+  color: #c084fc !important;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(192, 132, 252, 0.35);
+}
 
-    /* Social Icons */
-    .social-icon-btn {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background-color: #ede8fc;
-    color: #1a1a2e;
-    display: inline-flex;
-    align-items: center;
+/* Tech Chips Strip */
+.hero-tech-strip {
+  margin-top: 1.25rem;
+}
+
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(192, 132, 252, 0.28);
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.tech-chip:hover {
+  background: rgba(168, 85, 247, 0.22);
+  border-color: rgba(192, 132, 252, 0.55);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+}
+
+.tech-chip:hover {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: rgba(192, 132, 252, 0.35);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Social Buttons */
+.social-icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(8px);
+}
+
+.social-icon-btn:hover {
+  background: var(--grad-primary);
+  border-color: rgba(192, 132, 252, 0.5);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.35);
+}
+
+/* ==========================================================================
+   RIGHT SIDE: DUAL-LIGHTING PHOTO SHOWCASE (LILAC SHIRT + AMBER RIM LIGHT)
+   ========================================================================== */
+
+.hero-img-container {
+  position: relative;
+  width: 100%;
+  max-width: 470px;
+  height: 530px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Cutout Person Image */
+.hero-person-cutout {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  max-height: 520px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.65));
+  margin-bottom: 5px;
+  transition: transform 0.4s ease;
+  mask-image: linear-gradient(to bottom, black 86%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 86%, transparent 100%);
+}
+
+/* 5. Floating Interactive Glass Badges */
+.floating-hero-pill {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(14, 18, 34, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  border-radius: 16px;
+  padding: 10px 16px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65);
+  transition: all 0.3s ease;
+}
+
+.floating-hero-pill strong {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.floating-hero-pill small {
+  color: #cbd5e1 !important;
+}
+
+.floating-hero-pill:hover {
+  transform: translateY(-4px) scale(1.04);
+  border-color: rgba(192, 132, 252, 0.6);
+  box-shadow: 0 18px 40px rgba(168, 85, 247, 0.35);
+}
+
+.pill-icon-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Concentric HUD Layer (Takes full container dimensions) */
+.hero-hud-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Badge Positioning & Floating Animations */
+.badge-float-top-left {
+  top: 18%;
+  left: -35px;
+  animation: floatBadge1 5s ease-in-out infinite;
+}
+
+.badge-float-bottom-right {
+  top: 55%;
+  right: -35px;
+  animation: floatBadge2 6s ease-in-out infinite;
+}
+
+@keyframes floatBadge1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes floatBadge2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes floatBadge3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* ==========================================================================
+   RESPONSIVE HERO QUERIES
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 3.2rem;
+  }
+  .hero-img-container {
+    height: 480px;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-tech-strip,
+  .hero-section .d-flex.flex-wrap {
     justify-content: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    }
+  }
 
-    .social-icon-btn:hover {
-    background-color: #6f42c1;
-    color: #ffffff;
-    transform: translateY(-2px);
-    }
-
-
-    /* 
-    * -------------------------------------------------------------
-    * RIGHT SIDE: IMAGE & LAYERED BLOB BACKDROP (BIGGER IMAGE)
-    * -------------------------------------------------------------
-    */
-
-    .hero-img-container {
-    position: relative;
-    width: 100%;
-    max-width: 450px; /* Increased container width */
-    height: 480px;     /* Increased height */
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-end; /* Keeps image grounded at bottom */
+  .hero-social-section .d-flex {
     justify-content: center;
-    }
+  }
 
-    /* 1. Outer Gradient Ambient Glow */
-    .hero-blob-backdrop {
-    position: absolute;
-    width: 120%;
-    height: 120%;
-    top: -10%;
-    left: -10%;
-    background: radial-gradient(
-        circle,
-        rgba(111, 66, 193, 0.22) 0%,
-        rgba(247, 246, 252, 0) 70%
-    );
-    z-index: 1;
-    pointer-events: none;
-    }
+  .hero-img-container {
+    margin-top: 2rem;
+    height: 460px;
+    max-width: 380px;
+  }
 
-    /* 2. Solid Soft Purple Organic Blob Shape */
-    .hero-organic-shape {
-    position: absolute;
-    width: 95%;
-    height: 90%;
-    bottom: 0;
-    left: 2.5%;
-    background: linear-gradient(135deg, #e4dafd 0%, #dcd0f9 100%);
-    border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
-    z-index: 2;
-    box-shadow: 0 20px 40px rgba(111, 66, 193, 0.08);
-    }
+  .badge-float-top-left {
+    left: 0;
+    top: 5%;
+  }
 
-    /* 3. The Cutout Person Image (Scaled Up) */
-    .hero-person-cutout {
-    position: relative;
-    z-index: 3;
-    height: 100%;       
-    max-height: 480px;  
-    width: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 15px 25px rgba(26, 26, 46, 0.12));
-    margin-bottom: 20px;
-    margin-left: 30px; 
-    }
+  .badge-float-bottom-right {
+    right: 0;
+    bottom: 8%;
+  }
 
-    /* Responsive tweak for smaller laptops / screens */
-    @media (max-width: 1200px) {
-    .hero-img-container {
-        height: 500px;
-    }
-    .hero-person-cutout {
-        max-height: 520px;
-    }
-    }
+  .badge-float-bottom-left {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-img-container {
+    height: 390px;
+    max-width: 320px;
+  }
+
+  .hero-person-cutout {
+    max-height: 410px;
+  }
+
+  .floating-hero-pill {
+    padding: 6px 12px;
+  }
+}
